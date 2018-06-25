@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from './components/Grid'
 
-const App = () => (
+
+ const App = (props) =>
   <div>
-    {/*This is where the app components are going to be.*/ }
+   <Grid />
   </div>
-);
 
 export default App;

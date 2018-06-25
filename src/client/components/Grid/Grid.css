@@ -1,0 +1,26 @@
+html,
+body,
+.section-grid {
+  height: 100%;
+  margin: 2px;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows:  (auto-fill); 
+  grid-template-areas: "cell--large cell--large";
+}
+
+.img-content {
+  max-width: 100%;
+  padding: 1%;
+  background: radial-gradient(#fcfcfc, #dadada);
+  outline: 1px solid white;
+}
+
+.poke-image {
+  width: 80%;
+  height: auto;
+  grid-area: cell--large
+}

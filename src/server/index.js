@@ -1,10 +1,13 @@
 const express = require('express');
-const app = express();
 const morgan = require('morgan');
 const helmet = require('helmet');
+const icons = require('./assets/');
+const cors = require('cors');
 
-app.use(morgan);
-app.use(helmet);
-app.use(express.static('dist'));
+const app = express();
 
+app.use(morgan('default'), helmet(), express.json(), cors());
+app.get('/api/icons', (req, res) => {
+  res.status(200).json({'data': icons})
+});
 app.listen(8000, () => console.log('Listening on port 8000...'))
