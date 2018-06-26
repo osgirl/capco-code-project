@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: 'style-loader',
+        use: ['style-loader', 'css-loader'],
         options: {
           insertAt: 'top',
           hmr: true
