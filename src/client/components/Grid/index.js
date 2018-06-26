@@ -20,10 +20,9 @@ export default class Grid extends React.Component {
 
   componentDidMount() {
     axios(URL)
-      .then(resp => resp.json())
+      .then(resp => resp.data.data)
       .then((data) => {
-        console.log(data);
-        this.setState({ icons: data.data });
+        this.setState({ icons: data });
       })
       .catch(err => console.log(err));
   }
@@ -31,7 +30,7 @@ export default class Grid extends React.Component {
   render() {
     return (
       <div className="container" >
-        {this.state.icons.map(data => <Tile name={data.name} data={data.src} onClick="handleClick" key={data.name} />)}
+        {this.state.icons.map(data => <Tile name={data[0]} src={data[1]} onClick="handleClick" key={data[0]} />)}
       </div>
     );
   }
