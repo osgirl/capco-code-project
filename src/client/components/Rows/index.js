@@ -1,7 +1,6 @@
 import React from "react";
 import Tile from "../Tile";
 import style from "./Rows.css";
-
 const Rows = props => {
 
   const handleClick = (e, name, index,  cb) => {
@@ -19,7 +18,7 @@ const Rows = props => {
           name={name}
           index={props.index}
           isActive={active === name ? true : false}
-          handleClick={e => handleClick(e, name, index, props.clickHandler)}
+          handleClick={e => handleClick(e, name, index, props.action)}
           src={data}
           key={name}
         />
