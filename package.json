@@ -16,12 +16,13 @@
   "author": "Randall Whitlock",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "helmet": "^3.12.1",
+    "morgan": "^1.9.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "morgan": "^1.9.0",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
@@ -52,4 +53,4 @@
     "url": "https://github.com/randallwhitlock/capco-code-project/issues"
   },
   "homepage": "https://github.com/randallwhitlock/capco-code-project#readme"
-} 
+}

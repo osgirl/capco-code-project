@@ -1,13 +1,11 @@
-import React from "react";
-import "./Tile.css";
-import Svg from "../Svg";
+import React from 'react';
+import './Tile.css';
+import Svg from '../Svg';
 
-const Tile = props => {
-  return (
-    <div onClick={props.handleClick}>
-      <Svg src={props.data} />
-    </div>
-  );
-};
+const Tile = props => (
+  <div>
+    <Svg src={props.src} />
+  </div>
+);
 
 export default Tile;
