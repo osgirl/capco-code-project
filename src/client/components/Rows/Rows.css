@@ -1,0 +1,10 @@
+.rows {
+  display: grid;
+  grid-template-columns: repeat(9, 11.1%);
+  grid-template-rows: repeat(2, 20%);
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: dense;
+  position: relative;
+}
+
