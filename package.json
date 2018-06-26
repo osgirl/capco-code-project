@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "This is a coding project that I was asked to complete as part of the pre-employment process for Capco.",
   "main": "src/server/index.js",
+  "engines": {
+    "node": "8.9.x"
+  },
   "scripts": {
-    "start": "node src/server/index.js",
+    "start": "node src/server",
     "build": "webpack --mode production",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-    "dev": "concurrently \"npm run start\" \"npm run client\""
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,10 +21,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "cluster": "^0.7.7",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "helmet": "^3.12.1",
     "morgan": "^1.9.0",
+    "os": "^0.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"

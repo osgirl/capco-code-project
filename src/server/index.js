@@ -1,23 +1,39 @@
-const express = require("express");
-const path = require("path");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const icons = require("./assets/");
-const cors = require("cors");
+  const express = require("express");
+  const path = require("path");
+  const icons = require("./assets/");
+  const cluster = require('cluster');
+  const numCPUs = require('os').cpus().length;
+  const cors = require('cors');
 
-const app = express();
-const port = process.env.PORT || 8000;
+  const PORT = process.env.PORT || 8000;
 
-app.use(morgan('default'), helmet(), express.json(), cors());
 
-app.use(express.static(path.join(__dirname, 'dist')));
+  // Pretend like this app is going to use more than one core.
+  if (cluster.isMaster) {
+    console.error(`Node cluster master ${process.pid} is running`);
 
-app.get('/api/icons', (req, res) => {
-  res.status(200).json({ data: icons });
-});
+    // Forkers
+    for (let i = 0; i < numCPUs; i++) {
+      cluster.fork();
+    }
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(`${__dirname}/dist/index.html`));
-});
+    cluster.on('exit', (worker, code, signal) => {
+      console.error(`Node cluster worker ${worker.process.pid} exited: code ${code}, signal ${signal}`);
+    });
 
-app.listen(port, () => console.log('Listening on port 8000...'));
+  } else {
+    const app = express();
+    
+    app.use(cors());
+    
+    app.get('/api/icons', function (req, res) {
+      res.set('Content-Type', 'application/json');
+      res.send(icons);
+    });
+
+    app.use(express.static(path.resolve(__dirname, '../../dist')));
+
+    app.listen(PORT, function () {
+      console.error(`Cluter ${process.pid} is listening on port ${PORT}`);
+    });
+  }

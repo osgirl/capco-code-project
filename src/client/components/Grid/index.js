@@ -20,7 +20,7 @@ export default class Grid extends React.Component {
 
   componentDidMount() {
     axios(URL)
-      .then(resp => resp.data.data)
+      .then(resp => resp.data)
       .then((data) => {
         this.setState({ icons: data });
       })
