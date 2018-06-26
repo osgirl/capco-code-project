@@ -1,9 +1,9 @@
-const express = require('express');
-const morgan = require('morgan');
-const helmet = require('helmet');
-const icons = require('./assets/');
-const cors = require('cors');
-const path = require('path');
+const express = require("express");
+const path = require("path");
+const morgan = require("morgan");
+const helmet = require("helmet");
+const icons = require("./assets/");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 8000;
