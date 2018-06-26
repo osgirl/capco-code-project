@@ -1,5 +1,5 @@
 const port = process.env.PORT || 8000;
-const URL = `http://localhost:${port}/api/icons`;
+const URL = `https://tc4drnr.herokuapp.com:${port}/api/icons`;
 
 
 export default URL;
