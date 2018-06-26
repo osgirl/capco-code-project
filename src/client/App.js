@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Grid from './components/Grid'
+import Grid from './components/Grid';
 
 
- const App = (props) =>
+const App = (props) => (
   <div>
-   <Grid />
-  </div>
-
+    <Grid />
+  </div>);
 export default App;

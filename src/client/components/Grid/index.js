@@ -1,31 +1,37 @@
-import React from "react";
-import Tile from "../Tile";
-import URL from '../../variables'
+import React from 'react';
+import Tile from '../Tile';
+import URL from '../../variables';
+import axios from 'axios';
 
-import "./Grid.css";
+import './Grid.css';
 
 
 export default class Grid extends React.Component {
-  state = {
-    icons: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      icons: []
+    };
+  }
+
+  handleClick = (e) => {
+     e.preventDefault();
+  }
 
   componentDidMount() {
-    fetch(URL)
-    .then(resp => resp.json())
-    .then(iconPaths => {
-      this.setState({icons: Object.entries(iconPaths)})
-    })
-    .catch(err => console.log(err))
+    axios(URL)
+      .then(resp => resp.data.data)
+      .then((data) => {
+        this.setState({ icons: data });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
     return (
-      <div className="container">
-        {this.state.icons.map(data => {
-          return <Tile name={data[0]} data={data[1]} key={data[0]} />
-        })}
+      <div className="container" >
+        {this.state.icons.map(data => <Tile name={data[0]} src={data[1]} onClick="handleClick" key={data[0]} />)}
       </div>
-    )
+    );
   }
 }
