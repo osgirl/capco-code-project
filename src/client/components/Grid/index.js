@@ -10,32 +10,22 @@ export default class Grid extends React.Component {
     this.state = {
       icons1: [],
       icons2: [],
+      names: [],
       active1: 'amazon',
       active2: 'npm'
     };
   }
   
+  changeActive1 = (name, index) => {
+    this.setState({ active1: name })
+  }
 
-  clickHandler = (e, name, index) => {
-    const {icons1, icons2} = this.state;
-    let icons;
-    if (icons1.includes(name)) icons = icons1;
-    else icons = icons2; 
-
-    const minus8 = index - 8;
-    
-    if (minus8 > 0) {
-      let newIndex = minus8 + 1;
-      let temp = icons[index];
-      icons[index] = icons[newIndex];
-      icons[newIndex] = temp;
-    }
-      if (icons1.includes(name)) this.setState({icons1: icons, active1: icon[0]})
-      if (icons2.includes(name)) this.setState({icons2: icons, active2: icon[0]})
-    }
+  changeActive2 = (name, index) => {
+    this.setState({ active2: name })
+  }
 
   setIcons = (icons) => {
-    this.setState({ icons1: icons.slice(0, 15), icons2: icons.slice(16, 31) })
+    this.setState({ icons1: icons.slice(0, 15), icons2: icons.slice(16, 31), names: Object.keys(icons) })
   }
 
   componentDidMount() {
@@ -49,8 +39,8 @@ export default class Grid extends React.Component {
 
     return (
       <div className="container" >
-        <Rows clickHandler={this.clickHandler} tiles={icons1} active={active1} />
-        <Rows clickHandler={this.clickHandler} tiles={icons2} active={active2}/>
+        <Rows action={this.changeActive1} tiles={icons1} active={active1} />
+        <Rows action={this.changeActive2} tiles={icons2} active={active2}/>
       </div>
     );
   }

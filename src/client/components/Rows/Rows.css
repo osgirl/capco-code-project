@@ -4,7 +4,7 @@
   grid-template-rows: repeat(2, 20%);
   margin: 0;
   padding: 0;
-  grid-auto-flow: dense;
+  grid-auto-flow: column dense;
   position: relative;
 }
 

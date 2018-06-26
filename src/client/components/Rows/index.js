@@ -6,7 +6,7 @@ const Rows = props => {
 
   const handleClick = (e, name, index,  cb) => {
     e.preventDefault();
-    cb(e,name, index);
+    props.action(name, index);
   };
 
   const { active } = props;
