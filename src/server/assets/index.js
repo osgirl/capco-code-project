@@ -31,6 +31,7 @@ const vscode = require(`${'./vscode.js'}`);
 const vuejs = require(`${'./vuejs.js'}`);
 const vuetify = require(`${'./vuetify.js'}`);
 const webpack = require(`${'./webpack.js'}`);
+const java = require(`${'./java.js'}`);
 
 const jsList = [
   [ "amazon",  amazon],
@@ -65,6 +66,7 @@ const jsList = [
   [ "vscode",  vscode],
   [ "vuejs",  vuejs],
   [ "vuetify",  vuetify],
-  [ "webpack",  webpack]
+  [ "webpack",  webpack],
+  [ "java", java]
 ];
 module.exports = jsList;
