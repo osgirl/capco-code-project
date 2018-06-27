@@ -29,9 +29,8 @@
     "os": "^0.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-addons-transition-group": "^15.6.2",
     "react-dom": "^16.4.1",
-    "react-transition-group": "^2.3.1"
+    "react-spring": "^5.3.18"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

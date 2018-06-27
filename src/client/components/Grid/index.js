@@ -3,6 +3,7 @@ import URL from '../../variables';
 import axios from 'axios';
 import Rows from '../Rows';
 import style from './Grid.css';
+import PropTypes from 'prop-types';
 
 export default class Grid extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class Grid extends React.Component {
   }
 
   setIcons = (icons) => {
-    this.setState({ icons1: icons.slice(0, 15), icons2: icons.slice(16, 31), names: Object.keys(icons) })
+    this.setState({ icons1: icons.slice(0, 15), icons2: icons.slice(16, 31)})
   }
 
   componentDidMount() {
@@ -44,4 +45,12 @@ export default class Grid extends React.Component {
       </div>
     );
   }
+}
+
+Grid.propTypes = {
+  icons1: PropTypes.array,
+  icons2: PropTypes.array,
+  names: PropTypes.arrayOf(PropTypes.string),
+  active1: PropTypes.string,
+  active2: PropTypes.string
 }

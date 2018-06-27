@@ -12,10 +12,11 @@ const Rows = props => {
 
   return (
     <div className="rows">
-      {props.tiles.map(([name, data], index) => (
+      {props.tiles.map(([name, data, order], index) => (
         <Tile
           className={"tile "}
           name={name}
+          order={order}
           index={props.index}
           isActive={active === name ? true : false}
           handleClick={e => handleClick(e, name, index, props.action)}

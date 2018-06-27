@@ -33,8 +33,10 @@ const vuetify = require(`${'./vuetify.js'}`);
 const webpack = require(`${'./webpack.js'}`);
 const java = require(`${'./java.js'}`);
 
+let i = 0;
+
 const jsList = [
-  [ "amazon",  amazon],
+  [ "amazon",  amazon, i++],
   [ "apple",  apple],
   [ "android",  android],
   [ "angular",  angular],
@@ -69,4 +71,4 @@ const jsList = [
   [ "webpack",  webpack],
   [ "java", java]
 ];
-module.exports = jsList;
+module.exports = jsList;0000000000000000000000000000000000000

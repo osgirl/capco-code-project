@@ -1,12 +1,9 @@
 .tile {
-  background:  radial-gradient(white, lightgrey);
+  background-color: lightgrey;
   width: 100%;
   outline: 1px solid white;
   text-align: center;
-  transition-duration: 2s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(1,1.92,.69,1.1); 
-  position: relative;
+  transition: all 1s cubic-bezier(1,1.92,.69,1.1); 
 }
 
 .logo {

@@ -15,7 +15,6 @@ const Tile = ({ isActive, handleClick, src, name, index }) => {
   const color = isActive ? rbg() : "";
 
   return (
-    
     <div className={active} 
       onClick={(e) => handleClick(e, name, index)}
       style={{backgroundColor: color}}
