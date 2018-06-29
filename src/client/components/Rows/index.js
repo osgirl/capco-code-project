@@ -1,6 +1,8 @@
 import React from "react";
 import Tile from "../Tile";
 import style from "./Rows.css";
+import FlipMove from 'react-flip-move'
+
 const Rows = props => {
 
   const handleClick = (e, name, index,  cb) => {
@@ -14,7 +16,7 @@ const Rows = props => {
     <div className="rows">
       {props.tiles.map(([name, data, order], index) => (
         <Tile
-          className={"tile "}
+          className={active === name ? 'active' : 'tile'}
           name={name}
           order={order}
           index={props.index}
