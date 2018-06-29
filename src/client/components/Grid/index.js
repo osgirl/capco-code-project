@@ -4,7 +4,6 @@ import axios from 'axios';
 import Rows from '../Rows';
 import style from './Grid.css';
 import PropTypes from 'prop-types';
-import { FlipMove } from 'react-flip-move';
 
 export default class Grid extends React.Component {
   constructor(props) {

@@ -1,7 +1,6 @@
 import React from "react";
 import Tile from "../Tile";
 import style from "./Rows.css";
-import FlipMove from 'react-flip-move'
 
 const Rows = props => {
 
