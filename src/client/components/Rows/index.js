@@ -1,6 +1,7 @@
 import React from "react";
 import Tile from "../Tile";
 import style from "./Rows.css";
+import { PropTypes } from 'prop-types';
 
 const Rows = props => {
 
