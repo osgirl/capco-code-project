@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Graph /> should render a grid 1`] = `
+<div
+  className="container"
+>
+  <Rows
+    action={[Function]}
+    active="amazon"
+    tiles={Array []}
+  />
+  <Rows
+    action={[Function]}
+    active="npm"
+    tiles={Array []}
+  />
+</div>
+`;
