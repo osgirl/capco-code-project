@@ -1,72 +1,55 @@
-<h1 align="center">
-<br>
-  TC4DR&R <span> <sub><sup>Tile-Click-For-Dynamic-Resizing-And-Rearranging</sup></sub></span>
-</h1>
+# capco-code-project
 
-<h4 align="center">A grow-and-arrange-tiles-on-click demonstration implemented with <s>CSS Grid</s> <strong>Flexbox</strong> and served using <a href="https://expressjs.com">Express.js</a> back end.</h4>
+This is a coding project that I was asked to complete as part of the pre-employment process for Capco.
 
-## Setup
+## Installation
 
-To clone and run this application, you'll first need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) installed to your local development environment.  
-With those installed, open your terminal application and do the following:  
+To get started, you will need to install [Node.js](https://nodejs.org/) and [`npm`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
+or 
+[`yarn`](https://yarnpkg.com/en/)
+command line tools.
 
-```bash
-# Clone down this repo
-$ git clone https://github.com/randallwhitlock/capco-code-project
+```sh
+# Clone down the repo
+git clone https://github.com/randallwhitlock/capco-code-project
 
-# Navigate into the freshly cloned repo
-$ cd capco-code-project
-
-# Install the project's dependencies
-$ npm install
-
-# run the dev server:
-$ npm run dev
+# target the cloned repo and install dependencies
+cd capco-code-project && npm install
 ```
-Note: the dev server runs both the server and the client and allows for the api endpoint to be accessed from the browser
+## The Grid
 
-## <strong>My Process</strong>
+The grid is made using CSS grid.  
+TODO:  adjust animation and set up index swapping for better transitions.
 
-## Client
+## Tests
 
-Implemented in React using Flexbox after a learning experience with CSS Grid.  
-
-### React
-
-A library built by Facebook known for its use of custom components to build complex web applications.
-
-Installation:
-```js
-npm install --save react react-dom
-```
-### Flexbox
-
-Flexbox comes prebaked into CSS.  To learn more, <a href="https://flexboxfroggy.com">try this cool game</a> or take a look at <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">the MDN docs</a>.
-
-## Server
-
-### Express
-
-Express.js is a minimal framework built on top of Node.js that is known for it's minimalism, allowing for the developer to control the interactions that it has with the client at a lower level.
-
-Installation:
-
-```js
-npm install --save express
+Run tests with npm:
+```sh
+npm run test
 ```
 
-#### Middleware
+## Dependencies
 
-Middleware perform important functions and transform the data that is being sent out from browsers.  My implementations were mostly unnecessary for a project of this scale.
+- [axios](https://ghub.io/axios): Promise based HTTP client for the browser and node.js
+- [cluster](https://ghub.io/cluster): extensible multi-core server manager
+- [cors](https://ghub.io/cors): Node.js CORS middleware
+- [express](https://ghub.io/express): Fast, unopinionated, minimalist web framework
+- [helmet](https://ghub.io/helmet): help secure Express/Connect apps with various HTTP headers
+- [morgan](https://ghub.io/morgan): HTTP request logger middleware for node.js
+- [os](https://ghub.io/os): NodeJS Core Module Extended
+- [prop-types](https://ghub.io/prop-types): Runtime type checking for React props and similar objects.
+- [react](https://ghub.io/react): React is a JavaScript library for building user interfaces.
+- [react-dom](https://ghub.io/react-dom): React package for working with the DOM.
 
-**Todo: Update info on middleware**
+## Dev Dependencies
 
-### Currently
+- [babel-core](https://ghub.io/babel-core): Babel used to transpile code.
+- [css-loader](https://ghub.io/css-loader): css loader module for webpack
+- [enzyme](https://ghub.io/enzyme): JavaScript Testing utilities 
+- [eslint](https://ghub.io/eslint): Code linting for style.  Used react-specific linting rules
+- [jest](https://ghub.io/jest): JavaScript Testing Framework
+- [webpack](https://ghub.io/webpack): Used primarily for hot reloading components during development
 
-Fixing the layout and transitions
+## License
 
-### Todo: Deploy!
-
-## Credits
-
-This project uses icons found in the [DevIcon](https://github.com/konpa/devicon) repository.
+ISC
