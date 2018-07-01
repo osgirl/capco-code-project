@@ -17,11 +17,11 @@ export default class Grid extends React.Component {
     };
   }
   
-  changeActive1 = (name, index) => {
+  changeActive1 = (name) => {
     this.setState({ active1: name })
   }
 
-  changeActive2 = (name, index) => {
+  changeActive2 = (name) => {
     this.setState({ active2: name })
   }
 
