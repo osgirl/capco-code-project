@@ -5,5 +5,25 @@
   margin: 0;
   padding: 0;
   grid-auto-flow: column dense;
+
+  transition: 0.5s all linear;
 }
 
+
+.active {
+  position: relative;
+  width: 21.6vw;
+  height:  16vh;
+  grid-row: span 2;
+  grid-column: span 2;
+  animation-name: move-tile;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;  
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
+  transition: 0.5s all linear;
+}
+
+.tile {
+  transition: 0.5s all linear;
+}
