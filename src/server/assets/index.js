@@ -36,7 +36,7 @@ const java = require(`${'./java.js'}`);
 let i = 0;
 
 const jsList = [
-  [ "amazon",  amazon, i++],
+  [ "amazon",  amazon],
   [ "apple",  apple],
   [ "android",  android],
   [ "angular",  angular],
@@ -71,4 +71,4 @@ const jsList = [
   [ "webpack",  webpack],
   [ "java", java]
 ];
-module.exports = jsList;0000000000000000000000000000000000000
+module.exports = jsList;
